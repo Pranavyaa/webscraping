@@ -1,0 +1,15 @@
+import PyPDF2
+#python library to read pdf
+
+pdf = PyPDF2.PdfFileReader(open('name.pdf', "rb"))
+#creating a pdf reader object
+
+n=pdf.getNumPages()
+print(n)
+#printing number of pages in pdf 
+
+for i in range(n):
+   print(pdf.getPage(i).extractText())
+   
+
+
